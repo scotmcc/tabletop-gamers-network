@@ -1,7 +1,7 @@
 {
   "name": "tabletop-gamers-network",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website which allows gamers from all over the globe to find one another.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
