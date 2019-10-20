@@ -22,10 +22,19 @@ body {
     background-repeat:no-repeat;
 }
 
-#page {
+#background {
     background:transparent url("../images/bg-footer.jpg");
     background-position:bottom center;
     background-repeat:no-repeat;
+    opacity: 0.5;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 457px;
+}
+
+#page {
     padding:0;
     margin: 0 auto;
     position: absolute;
@@ -45,7 +54,7 @@ body {
     width: 950px;
 }
 
-#body {
+#content {
     position:absolute;
     top:220px;
     left: 0px;
@@ -68,6 +77,7 @@ body {
     left:0px;
     right:0px;
     bottom: 0px;
+    margin: 0 auto;
     width: 950px;
 }
 
@@ -95,13 +105,14 @@ body {
     top:90px;
     left:0px;
     right:0px;
+    padding: 0;
 }
 
 #header ul.navigation li {
     float:left;
     line-height:120px;
     text-align:center;
-    width: 160px;
+    width: 158px;
 }
 
 #header ul.navigation li a {
@@ -111,7 +122,6 @@ body {
     color:#311a0b;
     text-transform:uppercase;
     text-decoration:none;
-    padding:0 28px;
     text-shadow:0 1px 0 #e5c288;
     display:block;
 }
