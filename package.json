@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/scotmcc/tabletop-gamers-network/issues"
   },
-  "homepage": "https://github.com/scotmcc/tabletop-gamers-network#readme"
+  "homepage": "https://github.com/scotmcc/tabletop-gamers-network#readme",
+  "dependencies": {
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "mongoose": "5.7.5",
+    "winston": "3.2.1",
+    "ws": "7.1.2"
+  }
 }

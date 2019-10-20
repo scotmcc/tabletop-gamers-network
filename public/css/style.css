@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'atlas_of_the_magi';
+    src: url('../fonts/atlas_of_the_magi-webfont.woff2') format('woff2'),
+         url('../fonts/atlas_of_the_magi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'enchanted_landregular';
+    src: url('../fonts/enchanted_land-webfont.woff2') format('woff2'),
+         url('../fonts/enchanted_land-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background:#000000 url("../images/bg-header.jpg");
+    background-position:top center;
+    background-repeat:no-repeat;
+}
+
+#page {
+    background:transparent url("../images/bg-footer.jpg");
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    padding:0;
+    margin: 0 auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    height:220px;
+    width: 950px;
+}
+
+#body {
+    position:absolute;
+    top:220px;
+    left: 0px;
+    right: 0px;
+    bottom:100px;
+    color:#fbc316;
+    text-align: justify;
+    overflow-x: scroll;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    width: 950px;
+}
+
+#footer {
+    text-align: center;
+    color: #ffffff;
+    position:absolute;
+    height:20px;
+    left:0px;
+    right:0px;
+    bottom: 0px;
+    width: 950px;
+}
+
+#header div.logo {
+    background:transparent url("../images/logo.png");
+    background-position:top center;
+    background-repeat:no-repeat;
+    height: 85px;
+    width: 841px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+
+#header ul.navigation {
+    background:transparent url("../images/bg-navigation.png");
+    background-position:center center;
+    background-repeat:no-repeat;
+    list-style-type:none;
+    margin:0 auto;
+    height:120px;
+    position:absolute;
+    top:90px;
+    left:0px;
+    right:0px;
+}
+
+#header ul.navigation li {
+    float:left;
+    line-height:120px;
+    text-align:center;
+    width: 160px;
+}
+
+#header ul.navigation li a {
+    font-family:Volkhov;
+    font-size:20px;
+    font-weight:normal;
+    color:#311a0b;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:0 28px;
+    text-shadow:0 1px 0 #e5c288;
+    display:block;
+}
+
+#header ul.navigation li a:hover {
+    color:#ffffff;
+}
+
+#header ul.navigation li a.active {
+    color:#ffffff;
+}
+
+#footer a {
+    color: #ffffff;
+}
+
