@@ -22,6 +22,18 @@ body {
     background-repeat:no-repeat;
 }
 
+h2 {
+    margin: 5px;
+}
+
+img[align=right] {
+    margin-left: 10px;
+}
+
+img[align=left] {
+    margin-right: 10px;
+}
+
 #background {
     background:transparent url("../images/bg-footer.jpg");
     background-position:bottom center;
@@ -59,7 +71,7 @@ body {
     top:220px;
     left: 0px;
     right: 0px;
-    bottom:100px;
+    bottom:40px;
     color:#fbc316;
     text-align: justify;
     overflow-x: scroll;
@@ -73,12 +85,13 @@ body {
     text-align: center;
     color: #ffffff;
     position:absolute;
-    height:20px;
+    height:40px;
     left:0px;
     right:0px;
     bottom: 0px;
     margin: 0 auto;
     width: 950px;
+    line-height: 20px;
 }
 
 #header div.logo {
@@ -94,18 +107,25 @@ body {
     margin: 0 auto;
 }
 
-#header ul.navigation {
+#header .nav-bg {
     background:transparent url("../images/bg-navigation.png");
     background-position:center center;
     background-repeat:no-repeat;
-    list-style-type:none;
-    margin:0 auto;
     height:120px;
     position:absolute;
     top:90px;
     left:0px;
     right:0px;
+}
+
+#header ul.navigation {
+    list-style-type:none;
+    margin:0 auto;
     padding: 0;
+    position:absolute;
+    top:90px;
+    left:0px;
+    right:0px;
 }
 
 #header ul.navigation li {

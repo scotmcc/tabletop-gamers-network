@@ -2,25 +2,44 @@
 <head>
     <title>Tabletop Gamers Network</title>
     <meta  charset="utf-8">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="background"></div>
     <div id="page">
         <div id="header"></div>
-        <div id="content"></div>
+        <div id="content" class="groups">
+            <div class="content-box">
+                <h3>Search Groups</h3><br/>
+                <table>
+                    <tr>
+                        <td><label for="group">Group:</label></td>
+                        <td><input type="text" name="group"></td>
+                    <tr>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="type">Type:</label></td>
+                        <td><input type="text" name="type"></td>
+                    </tr>
+                    </tr>
+                        <td><label for="style">Style:</label></td>
+                        <td><input type="text" name="style"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content-box">
+                <h3>Latest Group Request</h3>
+                <div id="newest-post"></div>
+            </div>
+        </div>
         <div id="footer"></div>
     </div>
-    <script src="js/babel.js" crossorigin></script>
-    <script src="js/react.js" crossorigin></script>
-    <script src="js/react-dom.js" crossorigin></script>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-/* global $ */
-$(document).ready(function () {
-    $('#header').load('frag/header.html');
-    $('#footer').load('frag/footer.html');
-});
-    </script>
+    <script type="text/javascript" src="js/groups.js"></script>
 </body>

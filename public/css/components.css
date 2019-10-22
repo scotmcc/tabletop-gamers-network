@@ -1,0 +1,71 @@
+.content-box {
+    background-image: url('../images/text-bg.png');
+    width: 443px;
+    height: 400px;
+    border: solid 1px #fbc316;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box.wide {
+    width: 917px;
+    height: unset !important;
+}
+
+.content-box > div {
+    position: absolute;
+    bottom: 60px;
+    top: 40px;
+    left: 15px;
+    right: 15px;
+    overflow-y: hidden;
+}
+
+.home .content-box {
+    height: 200px;
+}
+
+#game.content-box {
+    float: left;
+}
+
+#group.content-box {
+    float: left;
+}
+
+#member.content-box {
+    float: right;
+    
+}
+
+#blog.content-box {
+    float: right;
+}
+
+#faq.content-box {
+    float: right;
+}
+
+#contact.content-box {
+    float: right;
+}
+
+.content-box h3 {
+    margin: 0 0 0 5px;
+}
+
+.content-box h4 {
+    margin: 0 0 5px 0;
+}
+
+.read-more {
+    background-image: url('../images/more.png');
+    height: 38px;
+    width: 150px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+}
