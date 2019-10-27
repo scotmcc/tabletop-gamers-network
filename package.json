@@ -4,6 +4,8 @@
   "description": "Website which allows gamers from all over the globe to find one another.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +22,6 @@
   "dependencies": {
     "express": "4.17.1",
     "mongoose": "5.7.5",
-    "react": "16.10.2",
-    "winston": "3.2.1",
     "ws": "7.1.2"
   }
 }

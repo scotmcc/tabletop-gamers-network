@@ -1,54 +1,83 @@
+@media screen and (max-width: 480px) {
+    body .content-box {
+        width: unset;
+        height: unset;
+        left: 0;
+        right: 0;
+    }
+    body .content-box.right {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    body .content-box {
+        width: unset;
+        height: unset;
+        left: 0;
+        right: 0;
+    }
+    body .content-box.right {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    body .content-box {
+        width: unset;
+        height: unset;
+        left: 0;
+        right: 0;
+    }
+    body .content-box.right {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    body .content-box {
+        width: 46.7%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    body .content-box {
+        width: 47.2%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    body .content-box {
+        width: 47.6%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body .content-box {
+        width: 48%;
+    }
+}
+
 .content-box {
     background-image: url('../images/text-bg.png');
-    width: 443px;
-    height: 400px;
+    height: 50%;
     border: solid 1px #fbc316;
-    margin: 5px;
     padding: 10px;
+    width: 46.7%;
     position: relative;
     overflow: hidden;
+    float: left;
+    margin-bottom: 5px;
 }
 
 .content-box.wide {
-    width: 917px;
-    height: unset !important;
+    width: unset;
+    height: unset;
+    left: 0;
+    right: 0;
 }
 
-.content-box > div {
-    position: absolute;
-    bottom: 60px;
-    top: 40px;
-    left: 15px;
-    right: 15px;
-    overflow-y: hidden;
-}
-
-.home .content-box {
-    height: 200px;
-}
-
-#game.content-box {
-    float: left;
-}
-
-#group.content-box {
-    float: left;
-}
-
-#member.content-box {
-    float: right;
-    
-}
-
-#blog.content-box {
-    float: right;
-}
-
-#faq.content-box {
-    float: right;
-}
-
-#contact.content-box {
+.content-box.right {
     float: right;
 }
 

@@ -16,10 +16,58 @@
 
 }
 
+@media screen and (max-width: 480px) {
+    body #header {
+        height: 120px;
+    }
+    body #content {
+        top:120px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    body #header {
+        height: 120px;
+    }
+    body #content {
+        top:120px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    body #header {
+        height: 150px;
+    }
+    body #content {
+        top:150px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    body #header {
+        height: 180px;
+    }
+    body #content {
+        top:180px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {}
+
+@media screen and (min-width: 1200px) {}
+
 body {
-    background:#000000 url("../images/bg-header.jpg");
+    background:#000000 url("../images/bg-header.png");
     background-position:top center;
     background-repeat:no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 h2 {
@@ -35,15 +83,15 @@ img[align=left] {
 }
 
 #background {
-    background:transparent url("../images/bg-footer.jpg");
+    background-image: url("../images/bg-footer.png");
     background-position:bottom center;
     background-repeat:no-repeat;
-    opacity: 0.5;
+    background-size: contain;
     position: absolute;
+    height: 50%;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: 457px;
 }
 
 #page {
@@ -63,7 +111,6 @@ img[align=left] {
     right: 0px;
     margin: 0 auto;
     height:220px;
-    width: 950px;
 }
 
 #content {
@@ -75,10 +122,6 @@ img[align=left] {
     color:#fbc316;
     text-align: justify;
     overflow-x: scroll;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 0 auto;
-    width: 950px;
 }
 
 #footer {
@@ -90,49 +133,49 @@ img[align=left] {
     right:0px;
     bottom: 0px;
     margin: 0 auto;
-    width: 950px;
     line-height: 20px;
 }
 
 #header div.logo {
-    background:transparent url("../images/logo.png");
+    background-image: url("../images/logo.png");
     background-position:top center;
     background-repeat:no-repeat;
-    height: 85px;
-    width: 841px;
+    background-size: contain;
     position: absolute;
-    top: 15px;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
+    top: 0px;
+    left: 50px;
+    right: 50px;
+    height: 50%;
 }
 
-#header .nav-bg {
-    background:transparent url("../images/bg-navigation.png");
+#header .navigation-background {
+    background-image: url("../images/bg-navigation.png");
     background-position:center center;
     background-repeat:no-repeat;
-    height:120px;
+    background-size: contain;
     position:absolute;
-    top:90px;
-    left:0px;
-    right:0px;
+    left:50px;
+    right:50px;
+    bottom: 0px;
+    height: 50%;
 }
 
 #header ul.navigation {
-    list-style-type:none;
-    margin:0 auto;
-    padding: 0;
-    position:absolute;
-    top:90px;
-    left:0px;
-    right:0px;
+    list-style-type: none;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 15px;
+    height: 30%;
+    margin: 0 auto;
+    max-width: 930px;
 }
 
 #header ul.navigation li {
     float:left;
-    line-height:120px;
     text-align:center;
-    width: 158px;
+    width: 15%;
+    line-height: 40px;
 }
 
 #header ul.navigation li a {
@@ -143,7 +186,6 @@ img[align=left] {
     text-transform:uppercase;
     text-decoration:none;
     text-shadow:0 1px 0 #e5c288;
-    display:block;
 }
 
 #header ul.navigation li a:hover {
