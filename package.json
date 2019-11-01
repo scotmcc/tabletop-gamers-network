@@ -1,0 +1,20 @@
+{
+  "name": "tabletop-gamers-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scotmcc/tabletop-gamers-network.git"
+  },
+  "keywords": [],
+  "author": "Scot McConnaughay <scotmcc@gmail.com> (http://cutlass.tech/)",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/scotmcc/tabletop-gamers-network/issues"
+  },
+  "homepage": "https://github.com/scotmcc/tabletop-gamers-network#readme"
+}
