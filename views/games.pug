@@ -1,0 +1,73 @@
+extends includes/layout
+
+append stylesheets
+  link(href='/stylesheets/games.css', rel='stylesheet', type='text/css')
+
+append javascripts
+  script(src='/javascripts/games.js', type='application/javascript')
+
+append main
+  div
+    .row.text-box
+      a.col-sm-4(data-toggle='collapse' href='#add-game' role='button' aria-expanded='false' aria-controls='add-game')
+        | Add Game
+      a.col-sm-4(data-toggle='collapse' href='#filter-game' role='button' aria-expanded='false' aria-controls='filter-game')
+        | Filter
+      .col-sm-4
+    div#add-game.collapse
+      .card
+        .card-header
+          | Add a new Game!
+        .card-body
+          h5.card-title Instructions
+          p.card-text This should be some instructions for adding a game...
+          form
+            input#title.form-control.form-control-sm(type="text" placeholder="Game's Title")
+            input#type.form-control.form-control-sm(type="text" placeholder="Game's Type")
+            input#theme.form-control.form-control-sm(type="text" placeholder="Game's Theme")
+            label(for='description') Example textarea
+            textarea#description.form-control(rows='3')
+            button.btn.btn-outline-warning.float-right(id="save-game") Save Game
+    div#filter-game.collapse
+      .card
+        .card-header
+          | Filter list!
+        .card-body
+          h5.card-title Instructions
+          p.card-text This should be some instructions for adding a game...
+          form
+            input#title.form-control.form-control-sm(type="text" placeholder="Game's Title")
+            input#type.form-control.form-control-sm(type="text" placeholder="Game's Type")
+            input#theme.form-control.form-control-sm(type="text" placeholder="Game's Theme")
+            label(for='description') Example textarea
+            textarea#description.form-control(rows='3')
+            button.btn.btn-outline-warning.float-right(id="save-game") Save Game
+  #gameList.accordion
+    each game, index in games
+      .card
+        .card-header(
+          id=`heading-${game._id}`
+          data-toggle="collapse"
+          data-target=`#game-${game._id}`
+          aria-expanded=`${index === 0 ? 'true' : 'false'}`
+          aria-controls=`game-${game._id}`
+        )
+          .container(
+            class=`${index === 0 ? '' : 'collapsed'}`
+          )
+            .row
+              .col-sm-4= game.title
+              .col-sm-4= game.theme
+              .col-sm-4= game.type
+        .collapse(
+          class=`${index === 0 ? 'show' : ''}`
+          id=`game-${game._id}`
+          aria-labelledby=`heading-${game._id}`
+          data-parent="#gameList"
+        )
+          .card-body
+            p= game.description
+            p.float-right
+              i(action="vote" gameId=`${game._id}`).fa.fa-heart= game.meta.votes
+              | &nbsp;&nbsp;
+              i(action="favorite" gameId=`${game._id}`).fa.fa-star= game.meta.favs

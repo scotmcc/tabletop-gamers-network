@@ -1,0 +1,33 @@
+doctype html
+html(lang='en').h-100
+  head
+    title Hello, world!
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='Scot McConnaughay <scotmcc@gmail.com>')
+    link(href='/css/all.css', rel='stylesheet', type='text/css')
+    link(href='/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/base.css', rel='stylesheet', type='text/css')
+    block stylesheets
+  body.d-flex.flex-column.h-100
+    div.bg-header.h-100.w-100
+    div.bg-footer.h-100.w-100
+    header
+      <!-- Header -->
+      include navigation
+    main(role="main").flex-shrink-0
+      div.container
+        include modal
+      div.container
+        <!-- Content -->
+        block main
+    extras#extras.invisible
+        block extras
+            include login
+    script(src='/socket.io/socket.io.js', type='application/javascript')
+    script(src='/js/jquery-3.4.1.min.js', type='application/javascript')
+    script(src='/js/bootstrap.min.js', type='application/javascript')
+    script(src='/js/popper.min.js', type='application/javascript')
+    script(src='/javascripts/base.js', type='application/javascript')
+    block javascripts

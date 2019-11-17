@@ -1,0 +1,20 @@
+form#loginForm
+  .form-group.row
+    label.col-sm-2.col-form-label(for='loginEmail') Email
+    .col-sm-10
+      input#loginEmail.form-control(type='email' placeholder='Email')
+  .form-group.row
+    label.col-sm-2.col-form-label(for='loginPass') Password
+    .col-sm-10
+      input#loginPass.form-control(type='password' placeholder='Password')
+  fieldset.form-group
+  .form-group.row
+    .col-sm-2
+    .col-sm-10
+      .form-check
+        input#loginRemember.form-check-input(type='checkbox')
+        label.form-check-label(for='loginRemember')
+          | Remember Me!
+  .form-group.row
+    .col-sm-10
+      button#loginSubmit.btn.btn-primary(type='submit') Sign in

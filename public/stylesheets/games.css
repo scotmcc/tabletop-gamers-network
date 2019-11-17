@@ -1,0 +1,23 @@
+p.float-right {
+  padding-left: 10px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: goldenrod;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-color: goldenrod;
+}
+
+.card-body {
+  background-color: transparent;
+}
+
+.card-title {
+}
+
+.card-text {
+}

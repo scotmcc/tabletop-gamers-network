@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  color: goldenrod;
+}
+
+main > .container {
+  padding: 80px 15px 0;
+}
+
+a,
+a:hover {
+  color: goldenrod;
+}
+
+.pad-right {
+  padding-right: 5px;
+}
+
+.form-control {
+  color: white;
+  background-color: transparent;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-brand {
+  color: goldenrod;
+}
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-header {
+  position: fixed;
+  top: 0px;
+  background-image: url('/images/bg-header.png');
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bg-footer {
+  position: fixed;
+  background-image: url('/images/bg-footer.png');
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
