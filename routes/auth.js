@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = mongoose => {
-  /* GET home page. */
-  router.get('/', function(req, res) {
-    res.render('about', { name: 'about' });
+  /* GET users listing. */
+  router.get('/', (req, res) => {
+    res.send(mongoose.modelNames());
   });
+
   return router;
 };

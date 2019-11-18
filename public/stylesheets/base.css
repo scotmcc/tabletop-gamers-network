@@ -1,6 +1,11 @@
 body {
+  width: 98%;
   background-color: black;
   color: goldenrod;
+}
+
+a.col-sm-4 {
+  text-align: center;
 }
 
 main > .container {

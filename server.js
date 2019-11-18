@@ -48,6 +48,7 @@ const accessLogStream = fs.createWriteStream(path.join(process.env.PWD, 'access.
 });
 
 const aboutRouter = require('./routes/about');
+const authRouter = require('./routes/auth');
 const gamesRouter = require('./routes/games');
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
@@ -116,10 +117,11 @@ function startServer() {
     next();
   });
 
-  app.use('/', indexRouter(mongoose));
-  app.use('/about', aboutRouter(mongoose));
-  app.use('/games', gamesRouter(mongoose));
-  app.use('/user', userRouter(mongoose));
+  app.use('/', indexRouter(mongoose, io));
+  app.use('/about', aboutRouter(mongoose, io));
+  app.use('/auth', authRouter(mongoose, io));
+  app.use('/games', gamesRouter(mongoose, io));
+  app.use('/user', userRouter(mongoose, io));
 
   app.use('*', (req, res) => {
     res.status(404).render('404');

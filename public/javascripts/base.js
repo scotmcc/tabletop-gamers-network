@@ -1,4 +1,4 @@
-/* global $ socket */
+/* global $ */
 
 (function() {
   var currentNode = null;
@@ -34,45 +34,47 @@
 })();
 
 (function() {
-  window.socket = window.io.connect();
+  var socket = (window.socket = window.io.connect());
   var connection = true;
-  $.socket = socket;
+
   socket.on('connect', function() {
     console.log('Connection Made');
-    socket.send('foo', 'bar');
-    socket.emit('foo', 'bar');
+    socket.send('send', 'main');
+    socket.emit('emit', 'main');
     if (!connection) {
       console.log('time to restart');
       location.reload();
     }
   });
+
   socket.on('disconnect', function() {
     console.log('Coonnection ended');
     connection = false;
   });
+
   socket.on('message', function(message) {
     console.log('socket.message', message);
   });
-})();
 
-$('#loginSubmit').click(function() {
-  console.log('Login submitted');
-  socket.emit('login', {
-    email: $('#loginEmail').val(),
-    password: $('#loginPass').val(),
-    remember: $('#loginRemember').val()
+  $('#loginSubmit').click(function() {
+    console.log('Login submitted');
+    socket.emit('login', {
+      email: $('#loginEmail').val(),
+      password: $('#loginPass').val(),
+      remember: $('#loginRemember').val()
+    });
   });
-});
 
-$('#signin').click(function() {
-  $.popup.open(
-    $('#loginForm'),
-    'Login Form',
-    function() {
-      console.log('Login Popup Opened');
-    },
-    function() {
-      console.log('Login Popup Closed');
-    }
-  );
-});
+  $('#signin').click(function() {
+    $.popup.open(
+      $('#loginForm'),
+      'Login Form',
+      function() {
+        console.log('Login Popup Opened');
+      },
+      function() {
+        console.log('Login Popup Closed');
+      }
+    );
+  });
+})();
